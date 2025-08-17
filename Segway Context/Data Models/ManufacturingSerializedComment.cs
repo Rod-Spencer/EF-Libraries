@@ -1,0 +1,19 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace Segway.EF.SegwayCntxt;
+
+public partial class ManufacturingSerializedComment
+{
+    public int Id { get; set; }
+
+    public string SerialNumber { get; set; } = null!;
+
+    public string? Category { get; set; }
+
+    public DateTime DateTimeEntered { get; set; }
+
+    public string UserName { get; set; } = null!;
+
+    public string? Comment { get; set; }
+}

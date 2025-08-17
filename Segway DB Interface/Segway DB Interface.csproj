@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <RootNamespace>Segway_DB_Interface</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BeamNG Context\BeamNG Context.csproj" />
+    <ProjectReference Include="..\Bugzilla Context\Bugzilla Context.csproj" />
+    <ProjectReference Include="..\JobSearch Context\JobSearch Context.csproj" />
+    <ProjectReference Include="..\Segway Context\Segway Context.csproj" />
+    <ProjectReference Include="..\Syteline Context\Syteline Context.csproj" />
+  </ItemGroup>
+
+</Project>
