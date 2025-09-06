@@ -4,7 +4,7 @@ using System.Runtime.Serialization;
 
 
 
-namespace Segway.EF.SegwayCntxt;
+namespace SpenSoft.EF.Segway;
 
 [Table("Manufacturing_Components")]
 public partial class Manufacturing_Components

@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
-namespace Segway.EF.SegwayCntxt;
+namespace SpenSoft.EF.Segway;
 
 [Table("PT_US_Cities")]
 public partial class PT_US_Cities

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Segway.EF.SegwayCntxt;
+namespace SpenSoft.EF.Segway;
 
 public partial class UicConfigurationTestResult
 {

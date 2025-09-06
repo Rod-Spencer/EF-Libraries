@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
-namespace Segway.EF.SegwayCntxt;
+namespace SpenSoft.EF.Segway;
 
 [Table("Manufacturing_Component_Assemblies")]
 public partial class Manufacturing_Component_Assemblies

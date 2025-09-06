@@ -1,4 +1,4 @@
-namespace Segway.EF.SegwayCntxt
+namespace SpenSoft.EF.Segway
 {
     /// <summary>Public Class - Valence_Battery_Master</summary>
     public partial class Valence_Battery_Master //: NHibernateBase

@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Runtime.Serialization;
 
-namespace Segway.EF.SegwayCntxt;
+namespace SpenSoft.EF.Segway;
 
 [Serializable]
 [DataContract]

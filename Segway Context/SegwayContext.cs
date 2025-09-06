@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
-namespace Segway.EF.SegwayCntxt;
+namespace SpenSoft.EF.Segway;
 
 public partial class SegwayContext : DbContext
 {
@@ -529,8 +530,17 @@ public partial class SegwayContext : DbContext
 
     public virtual DbSet<XxxCustAddress> XxxCustAddresses { get; set; }
 
+
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-        => optionsBuilder.UseSqlServer("Server=.;Database=Segway_Production;Trusted_Connection=True;Integrated Security=true;TrustServerCertificate=True");
+    {
+        var jsonSetting = new ConfigurationBuilder().AddJsonFile("appsettings-EF-Segway.json").Build();
+
+        var connectionString = jsonSetting.GetConnectionString("SegwayContext");
+        optionsBuilder.UseSqlServer(connectionString);
+    }
+
+    //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    //    => optionsBuilder.UseSqlServer("Server=.;Database=Segway_Production;Trusted_Connection=True;Integrated Security=true;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

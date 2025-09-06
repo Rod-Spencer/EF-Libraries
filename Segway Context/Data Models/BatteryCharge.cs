@@ -1,4 +1,4 @@
-﻿namespace Segway.EF.SegwayCntxt;
+﻿namespace SpenSoft.EF.Segway;
 
 public partial class BatteryCharge
 {
