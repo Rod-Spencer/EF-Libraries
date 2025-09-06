@@ -801,9 +801,8 @@ public partial class SytelineContext : DbContext
 
         modelBuilder.Entity<Custaddr>(entity =>
         {
-            entity
-                .HasNoKey()
-                .ToTable("custaddr");
+            entity.HasKey(e => e.RowPointer);
+            entity.ToTable("custaddr");
 
             entity.Property(e => e.Addr1)
                 .HasMaxLength(50)

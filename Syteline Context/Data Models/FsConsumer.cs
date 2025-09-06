@@ -1,10 +1,42 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace SpenSoft.EF.Syteline;
+﻿namespace SpenSoft.EF.Syteline;
 
 public partial class FsConsumer
 {
+    public FsConsumer() { }
+    public FsConsumer(Contact_Info ci)
+    {
+        this.Name = ci.Name;
+        this.Contact1 = ci.Contact;
+        this.Addr1 = ci.Address1;
+        this.Addr2 = ci.Address2;
+        this.City = ci.City;
+        this.State = ci.State;
+        this.County = ci.County;
+        this.Zip = ci.Zip;
+        this.Country = ci.Country;
+        this.Email1 = ci.Email;
+        this.Phone1 = ci.Phone;
+        this.CustNum = ci.RefNum;
+        this.CustSeq = ci.RefSeq;
+    }
+
+    public void Update(Contact_Info? ci)
+    {
+        this.Name = ci?.Name;
+        this.Contact1 = ci?.Contact;
+        this.Addr1 = ci?.Address1;
+        this.Addr2 = ci.Address2;
+        this.City = ci?.City;
+        this.State = ci?.State;
+        this.County = ci.County;
+        this.Zip = ci?.Zip;
+        this.Country = ci?.Country;
+        this.Email1 = ci?.Email;
+        this.Phone1 = ci?.Phone;
+        this.CustNum = ci?.RefNum;
+        this.CustSeq = ci?.RefSeq;
+    }
+
     public string? Addr1 { get; set; }
 
     public string? Addr2 { get; set; }
@@ -90,4 +122,5 @@ public partial class FsConsumer
     public int? UfSegConsumerType { get; set; }
 
     public byte? UfSegIsFavorite { get; set; }
+
 }

@@ -231,4 +231,10 @@ public partial class Customer
     public byte IncludeOrdersInTaxRpt { get; set; }
 
     public decimal? ConstructiveSalePricePct { get; set; }
+
+    public void Update(Contact_Info? contact)
+    {
+        this.Contact1 = contact?.Contact;
+        this.Phone1 = contact?.Phone;
+    }
 }

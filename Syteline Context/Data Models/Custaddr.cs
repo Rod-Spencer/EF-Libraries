@@ -77,4 +77,17 @@ public partial class Custaddr
     public DateTime CreateDate { get; set; }
 
     public byte InWorkflow { get; set; }
+
+    public void Update(Contact_Info? ci)
+    {
+        Name = ci?.Name;
+        this.Addr1 = ci?.Address1;
+        this.Addr2 = ci?.Address2;
+        this.City = ci?.City;
+        this.State = ci?.State;
+        this.County = ci?.County;
+        this.Zip = ci?.Zip;
+        this.Country = ci?.Country;
+        this.ExternalEmailAddr = ci?.Email;
+    }
 }
