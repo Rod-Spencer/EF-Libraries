@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace SpenSoft.EF.Segway;
 
@@ -536,7 +537,9 @@ public partial class SegwayContext : DbContext
         var jsonSetting = new ConfigurationBuilder().AddJsonFile("appsettings-EF-Segway.json").Build();
 
         var connectionString = jsonSetting.GetConnectionString("SegwayContext");
-        optionsBuilder.UseSqlServer(connectionString);
+        optionsBuilder.UseSqlServer(connectionString)
+                   .LogTo(Console.WriteLine, LogLevel.Information)
+                   .EnableSensitiveDataLogging();
     }
 
     //protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
