@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace SpenSoft.EF.Syteline;
 
@@ -292,4 +293,8 @@ public partial class FsSro
     public byte UfLrmIntegrate { get; set; }
 
     public byte? SegIsWarr { get; set; }
+
+    [NotMapped]
+    public string? TechnicianName { get; set; }
+
 }

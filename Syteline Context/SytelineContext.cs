@@ -127,6 +127,9 @@ public partial class SytelineContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        // Prevent EF from mapping TechnicianName to a column
+        modelBuilder.Entity<FsSro>().Ignore(e => e.TechnicianName);
+
         modelBuilder.Entity<Contact_Info>(entity =>
         {
             entity.HasNoKey();
